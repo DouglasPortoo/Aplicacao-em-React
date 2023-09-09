@@ -1,10 +1,12 @@
 import { Container,Menu } from "./styles"
 
+import {Input} from "../Input"
+
 export const Header = () => {
   return (
     <Container>
       <h1>RocketMovies</h1>
-      <input type="text" placeholder="Pesquise pelo titulo" />
+      <Input type={"text"} placeholder={"Pesquise pelo titulo"} />
 
       <Menu>
         <div>
@@ -17,5 +19,3 @@ export const Header = () => {
     </Container>
   )
 }
-
-export default Header

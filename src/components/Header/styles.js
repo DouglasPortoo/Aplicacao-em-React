@@ -19,15 +19,7 @@ gap:6.4rem;
 h1{
   color: ${({ theme }) => theme.COLORS.PINK};
 }
-/* 
-input{
-display: flex;
-padding: 1.9rem 2.4rem;
-align-items: flex-start;
-flex: 1;
-border-radius: 10px;
-background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};;
-} */
+
 
 `
 
