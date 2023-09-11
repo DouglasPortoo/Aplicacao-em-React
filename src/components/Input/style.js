@@ -1,13 +1,31 @@
 import styled from "styled-components";
 
-export const Container = styled.input`
+export const Container = styled.div`
+  width: 55%;
+  display: flex;
+  align-items: center;
 
-display: flex;
-padding: 1.9rem 2.4rem;
-align-items: flex-start;
-flex: 1;
-border-radius: 10px;
-background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
-color: ${({ theme }) => theme.COLORS.WHITE}
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800} ;
+  color: ${({ theme }) => theme.COLORS.GRAY_100};
+  
+  margin-bottom: 8px;
+  border-radius: 10px;
 
-`
+  input {
+    height: 56px;
+    
+
+    padding: 12px;
+    color: ${({ theme }) => theme.COLORS.WHITE};
+    background: transparent;
+    border: 0;
+
+    &:placeholder {
+      color: ${({ theme }) => theme.COLORS.BACKGROUND_800} 
+    }
+  }
+
+  svg {
+    margin-left: 16px;
+  }
+  ` 

@@ -1,12 +1,10 @@
-import { Container } from "./style"
+import { Container} from './style'
 
-export const Input = ({placeholder, ...rest}) => {
+export function Input({ icon: Icon, ...rest }) {
   return (
-    <Container
-    placeholder= {placeholder}
-    {...rest}
-    >
-    </Container >
+    <Container>
+      {Icon && <Icon size={20} />}
+      <input {...rest} />
+    </Container>
   )
 }
-

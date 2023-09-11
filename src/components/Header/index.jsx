@@ -1,4 +1,5 @@
 import { Container,Menu } from "./styles"
+import { FiSearch } from 'react-icons/fi'
 
 import {Input} from "../Input"
 
@@ -6,7 +7,7 @@ export const Header = () => {
   return (
     <Container>
       <h1>RocketMovies</h1>
-      <Input type={"text"} placeholder={"Pesquise pelo titulo"} />
+      <Input type="text" placeholder="Pesquise pelo titulo" icon={FiSearch} />
 
       <Menu>
         <div>
