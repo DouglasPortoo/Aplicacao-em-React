@@ -10,4 +10,30 @@ grid-template-areas:
 "header"
 "content"
 ;
+
+main{
+  grid-area: content;
+  overflow-y: scroll;
+  padding: 5.4rem 0; 
+  margin-top: 2.5rem;
+}
+
+`
+
+export const Content = styled.div`
+    
+  max-width:112.1rem;
+  margin: 0 auto;
+
+  div{
+  display: flex;
+  justify-content: space-between;
+  gap:663px;
+  align-items: center;
+  margin-bottom: 4rem;
+
+  h1{
+    width: 100%;
+  }
+}
 `
