@@ -2,7 +2,6 @@ import { Container, Content } from "./style";
 
 import { Button } from "../../components/Button";
 import { Header } from "../../components/Header";
-import { Tag } from "../../components/Tag";
 import { Card } from "../../components/Card";
 
 export const Home = () => {
