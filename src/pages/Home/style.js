@@ -13,7 +13,7 @@ grid-template-areas:
 
 main{
   grid-area: content;
-  overflow-y: scroll;
+  overflow-y:auto;
   padding: 5.4rem 0; 
   margin-top: 2.5rem;
 }
@@ -24,8 +24,10 @@ export const Content = styled.div`
     
   max-width:112.1rem;
   margin: 0 auto;
+ 
 
   div{
+   
   display: flex;
   justify-content: space-between;
   gap:663px;
@@ -35,5 +37,9 @@ export const Content = styled.div`
   h1{
     width: 100%;
   }
+
+  
 }
+
+
 `
