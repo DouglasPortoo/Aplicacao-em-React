@@ -32,6 +32,10 @@ export const Container = styled.button`
     font-weight: 400;
     
     color: var(--Gray, #999591);
+
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
     
   }
 
