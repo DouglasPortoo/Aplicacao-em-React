@@ -19,8 +19,6 @@ gap:6.4rem;
 h1{
   color: ${({ theme }) => theme.COLORS.PINK};
 }
-
-
 `
 
 export const Menu = styled.div`
@@ -34,8 +32,6 @@ gap: .9rem;
 >div{
 display: flex;
 flex-direction: column;
-
-
 
 p{
 color: ${({ theme }) => theme.COLORS.WHITE};
@@ -56,7 +52,7 @@ justify-content: flex-end
 }
 }
 
->img{
+>a,img{
 width: 6.4rem;
 height: 6.4rem;
 border-radius: 50%;

@@ -5,6 +5,7 @@ import {ButtonText} from "../../components/ButtonText"
 import { AiOutlineMail } from "react-icons/ai";
 import { FaLock } from "react-icons/fa";
 import {BsFillPersonFill} from 'react-icons/bs'
+import { Link } from "react-router-dom";
 
 
 export function SingUp() {
@@ -33,9 +34,9 @@ export function SingUp() {
 
         <Button title="Cadastrar"/>
         
-        <a href="#">
+        <Link to="/">
         <ButtonText title="Voltar para o login"/> 
-      </a>
+      </Link>
       </Form>
 
       <Backgroud/>

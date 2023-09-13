@@ -3,6 +3,7 @@ import { Container, Content } from "./style";
 import { Button } from "../../components/Button";
 import { Header } from "../../components/Header";
 import { Card } from "../../components/Card";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
   return (
@@ -12,7 +13,9 @@ export const Home = () => {
         <Content>
           <div>
             <h1>Meus filmes</h1>
+            <Link to="/new" >
             <Button title="+ Adicionar filme" />
+            </Link>
           </div>
 
           <Card

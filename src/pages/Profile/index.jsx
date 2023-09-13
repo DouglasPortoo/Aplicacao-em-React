@@ -1,4 +1,4 @@
-import { Container, Form,Avatar } from "./style";
+import { Avatar, Container, Form } from "./style";
 
 import { ButtonText } from "../../components/ButtonText";
 import { Input } from "../../components/Input";
@@ -8,14 +8,15 @@ import { AiOutlineMail } from "react-icons/ai";
 import { FaLock } from "react-icons/fa";
 import { BsFillPersonFill } from "react-icons/bs";
 import { FiCamera } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 export function Profile() {
   return (
     <Container>
       <header>
-        <a href="/">
-          <ButtonText title="voltar" />
-        </a>
+        <Link to="/">
+          <ButtonText title="Voltar" />
+        </Link>
       </header>
 
       <Form>

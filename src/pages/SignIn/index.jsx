@@ -3,6 +3,7 @@ import { Input } from "../../components/Input";
 import {Button} from "../../components/Button";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaLock } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 
 export function SingIn() {
@@ -26,13 +27,10 @@ export function SingIn() {
 
         <Button title="Entrar"/>
         
-        <a href="#">
+        <Link to="/register">
         Criar conta
-      </a>
+      </Link>
       </Form>
-
-     
-
       <Backgroud/>
       
     </Container>

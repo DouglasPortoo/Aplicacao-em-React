@@ -24,10 +24,8 @@ export const Content = styled.div`
     
   max-width:112.1rem;
   margin: 0 auto;
- 
 
-  div{
-   
+  div{ 
   display: flex;
   justify-content: space-between;
   gap:663px;
@@ -38,8 +36,8 @@ export const Content = styled.div`
     width: 100%;
   }
 
-  
+  a{
+    width: 100%;
+  }
 }
-
-
 `

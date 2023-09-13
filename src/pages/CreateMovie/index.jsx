@@ -4,6 +4,7 @@ import { ButtonText } from "../../components/ButtonText";
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 import { MovieItem } from "../../components/MovieItem";
+import { Link } from "react-router-dom";
 
 export function CreateMovie() {
   return (
@@ -11,9 +12,9 @@ export function CreateMovie() {
       <Header />
       <main>
         <Form>
-          <a href="/">
+          <Link to="/">
             <ButtonText title="Voltar" />
-          </a>
+          </Link>
           <h1>Novo Filme</h1>
 
           <div className="input">
@@ -32,8 +33,6 @@ export function CreateMovie() {
           <section>
             <MovieItem placeholder="Novo marcador" isNew />
             <MovieItem value="Drama" />
- 
-
           </section>
 
           <Button title="Salvar" />

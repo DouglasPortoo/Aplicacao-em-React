@@ -5,6 +5,7 @@ import { Tag } from "../../components/Tag";
 
 import { FiClock } from "react-icons/fi";
 import { ButtonText } from "../../components/ButtonText";
+import { Link } from "react-router-dom";
 
 export const Details = () => {
   return (
@@ -12,7 +13,9 @@ export const Details = () => {
       <Header />
       <main>
         <Content>
-          <ButtonText/>
+          <Link to="/" >
+          <ButtonText title="Voltar"/>
+          </Link>
 
           <h2>Interestellar</h2>
 
@@ -33,7 +36,7 @@ export const Details = () => {
             da NASA, tem uma fazenda com sua família. Murphy, a filha de dez
             anos de Cooper, acredita que seu quarto está assombrado por um
             fantasma que tenta se comunicar com ela. Pai e filha descobrem que o
-            "fantasma" é uma inteligência desconhecida que está enviando
+            fantasma é uma inteligência desconhecida que está enviando
             mensagens codificadas através de radiação gravitacional, deixando
             coordenadas em binário que os levam até uma instalação secreta da
             NASA liderada pelo professor John Brand. O cientista revela que um
