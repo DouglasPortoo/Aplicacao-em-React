@@ -30,14 +30,20 @@ height: 6.8rem;
 align-items: center;
 gap: .9rem;
 
+
 >div{
 display: flex;
 flex-direction: column;
+
+
 
 p{
 color: ${({ theme }) => theme.COLORS.WHITE};
 font-size: 1.4rem;
 font-weight: 700;
+width: 100px;
+display: flex;
+justify-content: flex-end
 }
 
 span{
