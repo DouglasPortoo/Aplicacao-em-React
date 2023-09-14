@@ -4,8 +4,9 @@ import { ButtonText } from "../../components/ButtonText";
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 import { MovieItem } from "../../components/MovieItem";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { api } from "../../services/api";
 
 export function CreateMovie() {
   const [title, setTitle] = useState("");
@@ -14,6 +15,8 @@ export function CreateMovie() {
   const [tags, setTags] = useState([]);
   const [newTag, setNewTag] = useState("");
 
+  const navigate = useNavigate();
+
   function handleAddTag() {
     setTags((prevState) => [...prevState, newTag]);
     setNewTag("");
@@ -21,6 +24,17 @@ export function CreateMovie() {
 
   function handleRemoveTag(deleted) {
     setTags((prevState) => prevState.filter((tag) => tag !== deleted));
+  }
+
+  async function handleNewNote() {
+    const response = await api.post("/notes", {
+      title,
+      description,
+      rating,
+      tags,
+    });
+    alert(response.data);
+    navigate("/");
   }
 
   return (
@@ -54,7 +68,7 @@ export function CreateMovie() {
           <h2>Marcadores</h2>
 
           <section>
-          <MovieItem
+            <MovieItem
               placeholder="Novo marcador"
               isNew
               onChange={(e) => setNewTag(e.target.value)}
@@ -69,10 +83,9 @@ export function CreateMovie() {
                 onClick={() => handleRemoveTag(tag)}
               />
             ))}
-            
           </section>
 
-          <Button title="Salvar" />
+          <Button title="Salvar" onClick={handleNewNote} />
         </Form>
       </main>
     </Container>
