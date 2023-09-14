@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { api } from "../services/api";
 
 export const AuthContext = createContext({});
@@ -27,6 +27,22 @@ export function AuthProvider({ children }) {
       }
     }
   }
+
+  useEffect(() => {
+   const user = localStorage.getItem("@MovieNotes:user")
+   const token = localStorage.getItem("@MovieNotes:token")
+
+   if(user && token){
+    api.defaults.headers.authorization = `Bearer ${token}`;
+    
+    setData({
+      token,
+      user: JSON.parse(user)
+    });
+   }
+
+  }, [])
+  
 
   return (
     <AuthContext.Provider
