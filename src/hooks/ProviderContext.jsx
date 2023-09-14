@@ -4,10 +4,9 @@ import { useNavigate } from "react-router-dom";
 
 export const AuthContext = createContext({});
 
-
 export function AuthProvider({ children }) {
   const [data, setData] = useState({});
-  
+  const [search, setSearch] = useState("");
 
   async function singIn({ email, password }) {
     try {
@@ -29,9 +28,9 @@ export function AuthProvider({ children }) {
     }
   }
 
-  function singOut(){
-    localStorage.removeItem("@MovieNotes:user")
-    localStorage.removeItem("@MovieNotes:token")
+  function singOut() {
+    localStorage.removeItem("@MovieNotes:user");
+    localStorage.removeItem("@MovieNotes:token");
 
     setData({});
   }
@@ -48,11 +47,12 @@ export function AuthProvider({ children }) {
         user: JSON.parse(user),
       });
     }
-
   }, []);
-  
+
   return (
-    <AuthContext.Provider value={{ singIn,singOut, user: data.user }}>
+    <AuthContext.Provider
+      value={{ singIn, singOut, search, setSearch, user: data.user }}
+    >
       {children}
     </AuthContext.Provider>
   );
