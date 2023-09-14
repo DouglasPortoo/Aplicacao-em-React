@@ -3,8 +3,16 @@ import { FiSearch } from 'react-icons/fi'
 
 import {Input} from "../Input"
 import { Link } from "react-router-dom"
+import { useAuth } from "../../hooks/useContext"
 
 export const Header = () => {
+
+  const {singOut} = useAuth()
+
+  function handleSingOut(){
+    singOut()
+  }
+
   return (
     <Container>
       <Link to="/">
@@ -15,7 +23,7 @@ export const Header = () => {
       <Menu>
         <div>
         <p>Douglas Porto</p>
-        <span>sair</span>
+        <span onClick={handleSingOut }>sair</span>
         </div>
         <Link to="/profile" >
           <img src="https://github.com/DouglasPortoo.png" alt="foto do usuario" />

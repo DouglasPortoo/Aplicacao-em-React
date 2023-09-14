@@ -46,10 +46,12 @@ span{
 color: ${({ theme }) => theme.COLORS.GRAY_100};
 font-size: 1.4rem;
 font-weight: 400;
+cursor: pointer;
 
 display: flex;
 justify-content: flex-end
 }
+
 }
 
 >a,img{
