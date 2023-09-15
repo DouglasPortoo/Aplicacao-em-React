@@ -5,11 +5,18 @@ import { Input } from "../Input";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../hooks/useContext";
 
+import { useNavigate } from "react-router-dom";
+
+
 export const Header = () => {
   const { singOut,setSearch } = useAuth();
 
+  const navigate = useNavigate();
+
   function handleSingOut() {
     singOut();
+    navigate("/");
+
   }
 
   return (

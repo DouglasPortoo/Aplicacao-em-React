@@ -14,7 +14,7 @@ grid-template-areas:
 
 main{
   grid-area: content;
-  overflow-y: scroll;
+  overflow-y: auto;
   padding: 5.4rem 0; 
   margin-top: 2.5rem;
   
@@ -37,7 +37,7 @@ export const Content = styled.div`
     text-align: justify;
     font-size: 16px;
     font-weight: 400;
-    margin: 4rem 0 0; 
+    margin: 4rem 0 80px; 
   
 }
 
@@ -63,6 +63,6 @@ export const Content = styled.div`
       color:${({theme})=> theme.COLORS.PINK}
     }
   }
- 
+
 
 `
