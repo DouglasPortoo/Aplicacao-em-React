@@ -19,7 +19,7 @@ export const Container = styled.button`
 
     color: ${({ theme }) => theme.COLORS.WHITE};
 
-    margin-bottom: 3.5rem;
+    margin-bottom: 1.5rem;
     
   }
 
@@ -43,5 +43,16 @@ export const Container = styled.button`
     width: 100%;
     display: flex;
     margin-top: 2.4rem;
+  }
+`
+
+export const Star = styled.span`
+  display: flex;
+  margin-bottom: 1.5rem;
+  color: ${({ theme }) => theme.COLORS.WHITE};
+  align-items: center;
+
+  >svg{
+    color:  ${({ theme }) => theme.COLORS.PINK};
   }
 `

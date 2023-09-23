@@ -24,7 +24,7 @@ export const Home = () => {
       setNotes(response.data);
     }
     fetchNotes();
-  }, [search]);
+  }, [search,notes]);
 
   return (
     <Container>
