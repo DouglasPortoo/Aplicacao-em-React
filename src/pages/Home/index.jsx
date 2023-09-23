@@ -37,9 +37,10 @@ export const Home = () => {
               <Button title="+ Adicionar filme" />
             </Link>
           </div>
-          {notes.map((note) => (
+          {notes && notes.map((note) => (
             <Card key={note.id} data={note}  onClick={() => handleDetails(note.id)}/>
           ))}
+          
         </Content>
       </main>
     </Container>
