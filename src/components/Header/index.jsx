@@ -6,10 +6,17 @@ import { Link } from "react-router-dom";
 import { useAuth } from "../../hooks/useContext";
 
 import { useNavigate } from "react-router-dom";
+import { api } from "../../services/api";
+import avatarPlaceholder from "../../../assets/semfoto.svg";
+
 
 
 export const Header = () => {
-  const { singOut,setSearch } = useAuth();
+  const { singOut,setSearch,user } = useAuth();
+
+  const avatarUrl = user.avatar
+    ? `${api.defaults.baseURL}/files/${user.avatar}`
+    : avatarPlaceholder;
 
   const navigate = useNavigate();
 
@@ -33,12 +40,12 @@ export const Header = () => {
 
       <Menu>
         <div>
-          <p>Douglas Porto</p>
+          <p>{user.name}</p>
           <span onClick={handleSingOut}>sair</span>
         </div>
         <Link to="/profile">
           <img
-            src="https://github.com/DouglasPortoo.png"
+            src={avatarUrl}
             alt="foto do usuario"
           />
         </Link>

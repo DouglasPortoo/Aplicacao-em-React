@@ -9,13 +9,22 @@ import { ButtonText } from "../../components/ButtonText";
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { api } from "../../services/api";
+import avatarPlaceholder from "../../../assets/semfoto.svg";
+
+import { useAuth } from "../../hooks/useContext";
 
 export const Details = () => {
+  const { user } = useAuth();
+
   const [data, setData] = useState("");
 
   const navigate = useNavigate();
 
   const params = useParams();
+
+  const avatarUrl = user.avatar
+    ? `${api.defaults.baseURL}/files/${user.avatar}`
+    : avatarPlaceholder;
 
   function handleBack() {
     navigate(-1);
@@ -34,11 +43,10 @@ export const Details = () => {
     async function fetchNote() {
       const response = await api.get(`/notes/${params.id}`);
       setData(response.data);
-      console.log(data);
     }
 
     fetchNote();
-  }, []);
+  }, [params.id]);
 
   return (
     <Container>
@@ -50,8 +58,8 @@ export const Details = () => {
           <h2>{data.title}</h2>
 
           <section>
-            <img src="https://github.com/DouglasPortoo.png" alt="" />
-            <p>Douglas Porto</p>
+            <img src={avatarUrl} alt="" />
+            <p>{user.name}</p>
             <FiClock />
             <span>{data.created_at}</span>
           </section>

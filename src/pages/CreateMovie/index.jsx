@@ -85,7 +85,7 @@ export function CreateMovie() {
               onClick={handleAddTag}
             />
 
-            {tags.map((tag, index) => (
+            {tags && tags.map((tag, index) => (
               <MovieItem
                 key={String(index)}
                 value={tag}
