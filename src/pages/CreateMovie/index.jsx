@@ -36,6 +36,10 @@ export function CreateMovie() {
       return alert("Você deixou uma tag no campo para adicionar, mas não clicou em adicionar. Clique para adicionar ou deixe o campo vazio.");
     }
 
+    if(rating > 5){
+      return alert("Apenas de 0 a 5");
+    }
+
     const response = await api.post("/notes", {
       title,
       description,
